@@ -108,3 +108,18 @@ ax2.legend()
 
 # Menampilkan grafik di Streamlit
 st.pyplot(fig2)
+
+# ================
+# FITUR INTERAKTIF
+# ================
+
+st.subheader("Prediksi Kelembaban Berdasarkan Input")
+
+# Input suhu dari user menggunakan slider
+input_suhu = st.slider("Masukkan Suhu (°C)", 20, 40, 30)
+
+# Menghitung prediksi kelembaban
+prediksi_kelembaban = a_suhu * input_suhu + b_suhu
+
+# Menampilkan hasil prediksi
+st.write(f"Prediksi Kelembaban: {prediksi_kelembaban:.2f}%")
